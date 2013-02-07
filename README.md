@@ -8,3 +8,11 @@ Install the dependencies:
 
     cd aws-workshop
     bundle
+
+Run tests:
+
+    rake
+
+Launch server:
+
+    rails server
