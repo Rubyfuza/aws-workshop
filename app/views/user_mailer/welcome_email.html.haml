@@ -1,0 +1,14 @@
+%html
+  %head
+  %body
+    %h1
+      Welcome to Chirp,
+      = @user.name
+    %p
+      You have signed up to Chirp!
+      Your username:
+      = @user.login
+    %p
+      = link_to "Log in here", @url
+    %p
+      Thank you for joining!
