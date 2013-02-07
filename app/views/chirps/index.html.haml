@@ -1,0 +1,11 @@
+%h1 Latest chirps
+
+%ul.chirps
+- @chirps.each do |chirp|
+  .chirp
+    %span.user= "@#{chirp.user}"
+    = chirp.content
+
+%br
+
+= link_to 'New Chirp', new_chirp_path

@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @chirp.user
+%p
+  %b Content:
+  = @chirp.content
+
+= link_to 'Edit', edit_chirp_path(@chirp)
+\|
+= link_to 'Back', chirps_path
