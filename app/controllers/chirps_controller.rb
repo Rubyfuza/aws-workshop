@@ -13,7 +13,7 @@ class ChirpsController < ApplicationController
   # POST /chirps
   # POST /chirps.json
   def create
-    @chirp = Chirp.new(params[:chirp])
+    @chirp = ChirpCreationService.new.create(params[:chirp])
 
     respond_to do |format|
       if @chirp.save
