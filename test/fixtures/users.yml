@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: Steve Jobs
+  email: steve@example.com
+  login: steve
+
+two:
+  name: Larry Page
+  email: larry@example.com
+  login: larry
