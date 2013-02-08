@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 
+gem 'aws-sdk', '~> 1.8.1'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :production do
@@ -44,4 +46,3 @@ gem 'haml'
 gem 'haml-rails'
 gem 'tinia', '~> 3.2.0'
 gem 'aws_cloud_search'
-gem 'aws-sdk'
