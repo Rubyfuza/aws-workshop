@@ -1,4 +1,4 @@
 .elasticbeanstalk/
 tmp/
-logs/
+log/
 db/*.sqlite3
