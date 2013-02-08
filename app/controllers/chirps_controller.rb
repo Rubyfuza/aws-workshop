@@ -10,6 +10,11 @@ class ChirpsController < ApplicationController
     end
   end
 
+  def user
+    @chirps = User.find_by_name!(params[:name]).chirps
+    render :index
+  end
+
   # POST /chirps
   # POST /chirps.json
   def create

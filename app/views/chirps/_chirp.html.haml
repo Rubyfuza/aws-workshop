@@ -1,5 +1,5 @@
 .chirp
-  %span.user= "@#{chirp.user}"
+  = link_to "@#{chirp.user.name}", user_chirps_path(:name => chirp.user.name)
   = chirp.content
   %small.pull-right
     = time_ago_in_words(chirp.created_at)
