@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 
+gem 'aws-sdk', '~> 1.8.1'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :production do
@@ -17,7 +19,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
@@ -44,4 +46,3 @@ gem 'haml'
 gem 'haml-rails'
 gem 'tinia', '~> 3.2.0'
 gem 'aws_cloud_search'
-gem 'aws-sdk'
