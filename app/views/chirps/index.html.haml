@@ -15,6 +15,7 @@
 
 %ul.chirps
 - @chirps.each do |chirp|
-  = render :partial => 'chirp', :locals => { :chirp => chirp }
+  - if chirp.user
+    = render :partial => 'chirp', :locals => { :chirp => chirp }
 
 %br
