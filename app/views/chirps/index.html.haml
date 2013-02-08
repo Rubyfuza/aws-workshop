@@ -1,15 +1,20 @@
-%h1 Latest chirps
+.navbar
+  .navbar-inner
+    %a.brand(href="#") Chirps!
 
-%form{:action => "/chirps/search", :method => "get", :class => "form-search" }
-  %input{:type => "search", :name => "query", :class => "search-query" }
-  %input{:type => "submit", :value => "Search", :class => "btn" }
+    %form.form-search.navbar-form.pull-right{:action => "/chirps/search", :method => "get", :class => "form-search" }
+      %input{:type => "search", :name => "query", :class => "search-query" }
+      - # %input{:type => "submit", :value => "Search", :class => "btn" }
+
+%form.form-inline.well(action='/chirps' method='POST')
+  .input-prepend
+    %span.add-on @
+    %input(type='text' name='chirp[user]' placeholder='handle')
+  %input(type='text' name='chirp[content]' placeholder='Say something!')
+  %input(type='submit' value='Chirp your mates')
 
 %ul.chirps
 - @chirps.each do |chirp|
-  .chirp
-    %span.user= "@#{chirp.user}"
-    = chirp.content
+  = render :partial => 'chirp', :locals => { :chirp => chirp }
 
 %br
-
-= link_to 'New Chirp', new_chirp_path

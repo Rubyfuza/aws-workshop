@@ -2,7 +2,4 @@
 
 %ul.chirps
 - @chirps.each do |chirp|
-  .chirp
-    %span.user= "@#{chirp.user}"
-    = chirp.content
-
+  = render :partial => 'chirp', :locals => { :chirp => chirp }

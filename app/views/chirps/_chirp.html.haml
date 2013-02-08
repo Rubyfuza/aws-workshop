@@ -1,0 +1,6 @@
+.chirp
+  %span.user= "@#{chirp.user}"
+  = chirp.content
+  %small.pull-right
+    = time_ago_in_words(chirp.created_at)
+    ago
