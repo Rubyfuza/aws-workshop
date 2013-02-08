@@ -1,0 +1,8 @@
+%h1= "Search results: #{@query}"
+
+%ul.chirps
+- @chirps.each do |chirp|
+  .chirp
+    %span.user= "@#{chirp.user}"
+    = chirp.content
+

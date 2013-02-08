@@ -80,4 +80,18 @@ class ChirpsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  # GET /search
+  # GET /search.json
+  def search
+    @query = params[:query]
+    sql = "content LIKE ?"
+    @chirps = Chirp.where([sql, "%#{@query}%"])
+
+    respond_to do |format|
+      format.html 
+      format.json { render json: @chirps }
+    end
+  end
+
 end

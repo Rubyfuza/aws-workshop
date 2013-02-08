@@ -1,5 +1,9 @@
 %h1 Latest chirps
 
+%form{:action => "/chirps/search", :method => "get", :class => "form-search" }
+  %input{:type => "search", :name => "query", :class => "search-query" }
+  %input{:type => "submit", :value => "Search", :class => "btn" }
+
 %ul.chirps
 - @chirps.each do |chirp|
   .chirp
