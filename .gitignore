@@ -1,0 +1,6 @@
+# Ignore railsy files
+tmp/
+log/
+.bundle/
+db/*.sqlite3
+
