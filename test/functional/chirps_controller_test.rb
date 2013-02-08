@@ -16,6 +16,6 @@ class ChirpsControllerTest < ActionController::TestCase
       post :create, chirp: { content: @chirp.content, user: @chirp.user }
     end
 
-    assert_redirected_to chirp_path(assigns(:chirp))
+    assert_redirected_to root_path
   end
 end
