@@ -11,3 +11,8 @@
     color: $blue;
   }
 }
+
+input[type='submit'] {
+  @extend .btn;
+  @extend .btn-primary;
+}
