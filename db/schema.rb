@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130207224622) do
+ActiveRecord::Schema.define(:version => 20130208143305) do
 
   create_table "chirps", :force => true do |t|
     t.string   "user"
@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(:version => 20130207224622) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "followings", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "following_user_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "followings", ["following_user_id"], :name => "index_followings_on_following_user_id"
+  add_index "followings", ["user_id"], :name => "index_followings_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"
