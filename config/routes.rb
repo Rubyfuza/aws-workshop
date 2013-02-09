@@ -2,6 +2,7 @@ Rubyfuza::Application.routes.draw do
   resources :chirps do
     collection do
       get 'search'
+      get 'user'
     end
   end
   resources :users
