@@ -17,6 +17,8 @@ class User < ActiveRecord::Base
   end
 
   def relevant_chirps
-    chirps.to_a.concat(following.map(&:chirps).flatten)
+    chirps.to_a.concat(following.map(&:chirps).flatten).sort_by do |chirp|
+      chirp.created_at
+    end.reverse
   end
 end

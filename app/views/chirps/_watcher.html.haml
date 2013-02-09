@@ -1,0 +1,6 @@
+%div.alert{:id => 'new-chirps-available'}
+  There are new chirps available
+  %a refresh now
+
+:javascript
+  chirpWatcher.boot("#{user_chirps_path(:name => @user.name)}", "#{@chirps.to_a.hash}")
