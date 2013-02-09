@@ -4,6 +4,10 @@ gem 'rails', '3.2.8'
 
 gem 'aws-sdk', '~> 1.8.1'
 
+group :development, :test do
+  gem 'guard-test'
+end
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :production do
