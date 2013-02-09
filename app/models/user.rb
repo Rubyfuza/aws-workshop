@@ -15,4 +15,8 @@ class User < ActiveRecord::Base
   def follow(another_user)
     followings.create(:following_user => another_user)
   end
+
+  def relevant_chirps
+    chirps.to_a.concat(following.map(&:chirps).flatten)
+  end
 end
