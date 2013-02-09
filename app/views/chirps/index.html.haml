@@ -1,8 +1,2 @@
 = render "chirps/header"
-
-%ul.chirps
-- @chirps.each do |chirp|
-  - if chirp.user
-    = render :partial => 'chirp', :locals => { :chirp => chirp }
-
-%br
+= render "chirps/list"
