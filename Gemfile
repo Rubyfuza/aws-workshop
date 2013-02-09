@@ -46,3 +46,7 @@ gem 'haml'
 gem 'haml-rails'
 gem 'tinia', '~> 3.2.0'
 gem 'aws_cloud_search'
+
+# Amazon Simple Email Service (SES)
+# https://github.com/drewblas/aws-ses
+gem "aws-ses", "~> 0.4.4", :require => 'aws/ses'
