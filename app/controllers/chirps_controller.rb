@@ -11,8 +11,8 @@ class ChirpsController < ApplicationController
   end
 
   def user
-    @chirps = User.find_by_name!(params[:name]).relevant_chirps
-    render :index
+    @user = User.find_by_name!(params[:name])
+    @chirps = @user.relevant_chirps
   end
 
   # POST /chirps

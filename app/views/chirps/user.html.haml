@@ -1,0 +1,9 @@
+= render "chirps/header"
+
+%h4
+  Chirps by
+  %span.user
+    = "@#{@user.name}"
+  and followers
+
+= render "chirps/list"
