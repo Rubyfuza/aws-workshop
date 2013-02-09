@@ -13,3 +13,7 @@ input[type='submit'] {
   @extend .btn;
   @extend .btn-primary;
 }
+
+#new-chirps-available {
+  display: none;
+}
