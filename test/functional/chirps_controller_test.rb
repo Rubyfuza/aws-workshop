@@ -13,7 +13,7 @@ class ChirpsControllerTest < ActionController::TestCase
 
   test "should create chirp" do
     assert_difference('Chirp.count') do
-      post :create, chirp: { content: @chirp.content, user: @chirp.user }
+      post :create, chirp: { content: @chirp.content, user_name: @chirp.user_name }
     end
 
     assert_redirected_to root_path
