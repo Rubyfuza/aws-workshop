@@ -13,6 +13,11 @@ class ChirpsController < ApplicationController
   def user
     @user = User.find_by_name!(params[:name])
     @chirps = @user.relevant_chirps
+
+    respond_to do |format|
+      format.html
+      format.json { render :json => { :hash => @chirps.hash.to_s }}
+    end
   end
 
   # POST /chirps
