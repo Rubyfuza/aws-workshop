@@ -1,5 +1,6 @@
 class CreateFollowings < ActiveRecord::Migration
   def change
+    drop_table :followings if Following.table_exists?
     create_table :followings do |t|
       t.references :user
       t.references :following_user
