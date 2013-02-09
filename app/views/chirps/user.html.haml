@@ -7,4 +7,11 @@
   and
   = pluralize @user.followers.count, "follower"
 
+%form.form-inline.well(action='/followings' method='POST')
+  = hidden_field_tag "user", @user.name
+  %label <label>Add a follower</label>
+  .input-prepend
+    %span.add-on @
+    %input(type='text' name='follower' data-provide='typeahead')
+
 = render "chirps/list"
