@@ -7,9 +7,6 @@
 .chirp {
   @extend .well;
   @extend .well-small;
-  .user {
-    color: $blue;
-  }
 }
 
 input[type='submit'] {

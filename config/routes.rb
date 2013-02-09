@@ -1,4 +1,6 @@
 Rubyfuza::Application.routes.draw do
+  get "followings/create"
+
   resources :chirps do
     collection do
       get 'search'
@@ -6,6 +8,7 @@ Rubyfuza::Application.routes.draw do
     end
   end
   resources :users
+  resource :followings
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
