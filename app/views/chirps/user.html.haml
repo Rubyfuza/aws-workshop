@@ -4,6 +4,7 @@
   Chirps by
   %span.user
     = "@#{@user.name}"
-  and followers
+  and
+  = pluralize @user.followers.count, "follower"
 
 = render "chirps/list"
